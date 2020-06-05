@@ -1,0 +1,22 @@
+{block name="extra-panel"}
+    <table class="lmsbox lms-ui-background-cycle">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    <a href="{$power_outages.link}">{$power_outages.channel.title}</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {foreach from=$power_outages.channel.item item=outage}
+                <tr class="highlight{if strpos($outage.title, " WYŁĄCZENIE ODWOŁANE!") !==false} blend{/if}">
+                    <td style="padding:1em;">
+                        <a class="bold" href="{$outage.link}">{$outage.title}</a> &nbsp; <span class="blend" style="float:right;">{trans("publication date")}: {$outage.pubDate}</span>
+                        <hr class="blendbg">
+                        {$outage.description}
+                    </td>
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
+{/block}

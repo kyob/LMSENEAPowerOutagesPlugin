@@ -1,0 +1,24 @@
+{extends file="layout.html"}
+{block name=title}::: LMS :{$layout.pagetitle|striphtml} :::{/block}
+{block name=module_content}
+    <table class="lmsbox lms-ui-background-cycle">
+        <thead>
+            <tr>
+                <th class="text-center">
+                    <a href="{$power_outages.channel.link}">{$power_outages.channel.title}</a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {foreach from=$power_outages.channel.item item=outage}
+                <tr class="highlight">
+                    <td style="padding:1em;">
+                        <a class="bold" href="{$outage.link}">{$outage.title}</a> <span class="blend">{trans("publication date")}: {$outage.pubDate}</span>
+                        <hr class="blendbg">
+                        {$outage.description}
+                    </td>
+                </tr>
+            {/foreach}
+        </tbody>
+    </table>
+{/block}
