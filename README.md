@@ -20,5 +20,7 @@ Go to https://www.wylaczenia-eneaoperator.pl/ search for the area you are intere
 
 Go to `<path-to-lms>/?m=configlist` then paste it to `enea.feed_url`. Otherway default value `https://www.wylaczenia-eneaoperator.pl/rss/rss_unpl_7.xml` will be used.
 
-## Donations :)
-https://github.com/kyob
+## Donation
+
+* Bitcoin (BTC): bc1qvwahntcrwjtdp0ntfd0l6kdvdr9d9h6atp6qrr
+* Ethereum (ETH): 0xEFCd4b066195652a885d916183ffFfeEEd931f40
