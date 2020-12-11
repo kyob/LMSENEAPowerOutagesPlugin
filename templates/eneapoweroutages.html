@@ -5,12 +5,12 @@
         <thead>
             <tr>
                 <th class="text-center">
-                    <a href="{$power_outages.channel.link}">{$power_outages.channel.title}</a>
+                    <a href="{$enea_power_outages.channel.link}"><i class="fas fa-bolt"></i> {$enea_power_outages.channel.title}</a>
                 </th>
             </tr>
         </thead>
         <tbody>
-            {foreach from=$power_outages.channel.item item=outage}
+            {foreach from=$enea_power_outages.channel.item item=outage}
                 <tr class="highlight">
                     <td style="padding:1em;">
                         <a class="bold" href="{$outage.link}">{$outage.title}</a> <span class="blend">{trans("publication date")}: {$outage.pubDate}</span>

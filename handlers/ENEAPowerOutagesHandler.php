@@ -44,9 +44,8 @@ class ENEAPowerOutagesHandler
         $feed = implode(file($feed_url));
         $xml = simplexml_load_string($feed);
         $json = json_encode($xml);
-        $array = json_decode($json, true);
 
-        $SMARTY->assign('power_outages', $array);
+        $SMARTY->assign('enea_power_outages', json_decode($json, true));
         return $hook_data;
     }
 }
